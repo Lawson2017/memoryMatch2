@@ -6,6 +6,7 @@
 //  Copyright © 2019 James Lawson. All rights reserved.
 //
 
+
 #include <iostream>
 using namespace std;
 int selectedRow; //user navigate row of puzzle grid
@@ -13,11 +14,235 @@ int selectedColumn; //user navigate column of puzzle grid
 string selectedBird; // store users selected square/bird into variable to try and match with another
 string matchedBird;
 string difficulty;
-string answerGrid[50][50]; // initialized as 50 variables even for the possibility of easy, to keep the loops running
+string answerGrid[50][50]; // initialized as 50 variables so I can use these same arrays to loop through for all 3 difficulties
 string puzzleGrid[50][50];
 string Term = "Birds";
-string birds[50] =  {"Goose","Teal","Shoveler","Mallard","Pintail","Quail","Pheasant","Turkey","Grebe","Pigeon","Dove","Nuthatch","Poorwill","Swift","Swallow","Rail","Sora","Coot","Stilt","Killdeer","Bushtit","Snipe","Wren","Murre","Murrelet","Gull","Loon","Kinglet","Pelican","Heron","Vulture","Osprey","Kite","Eagle","Harrier","Hawk","Owl","Thrush","Starling","Waxwing","Flicker","Kestrel","Merlin","Falcon","Pewee","Grosbeak","Phoebe","Shrike","Vireo","Jay"}; // global declaration of single dimmensional array of bird names to be placed in games
-
+string birds[50] =  {"Goose","Teal","Shoveler","Mallard","Pintail","Quail","Pheasant","Turkey","Grebe","Pigeon","Dove","Nuthatch","Poorwill","Swift","Swallow","Rail","Sora","Coot","Stilt","Killdeer","Bushtit","Snipe","Wren","Murre","Murrelet","Gull","Loon","Kinglet","Pelican","Heron","Vulture","Osprey","Kite","Eagle","Harrier","Hawk","Owl","Thrush","Starling","Waxwing","Flicker","Kestrel","Merlin","Avocet","Pewee","Grosbeak","Phoebe","Shrike","Vireo","Jay"}; // global declaration of single dimmensional array of bird names to be placed in games
+void checkMatch_easy(){ // checks for 4 matches on a 4X4 grid
+    cout << "Enter a row 0-3: " << endl;
+    cin >> selectedRow;
+    cout << "Enter a column: " << endl;
+    cin >> selectedColumn;
+    selectedBird = answerGrid[selectedRow][selectedColumn];
+    cout << "Selected bird: " << selectedBird << endl;
+    cout << "Enter another row: " << endl;
+    cin >> selectedRow;
+    cout << "Enter another column: " << endl;
+    cin >> selectedColumn;
+    matchedBird = answerGrid[selectedColumn][selectedRow];
+    cout << "Attempted match: " << matchedBird << endl;
+    if(selectedBird == matchedBird){
+        cout << selectedBird << " is a match with: " << matchedBird << endl;
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+    } else {
+        cout << "Incorrect. Please start over" << endl; // program must restart after mistakes
+    }
+}
+void checkMatch_medium(){
+    cout << "Enter a row 0-5: " << endl; // checks for matches on a 6X6 grid
+    cin >> selectedRow;
+    cout << "Enter a column: " << endl;
+    cin >> selectedColumn;
+    selectedBird = answerGrid[selectedRow][selectedColumn];
+    cout << "Selected bird: " << selectedBird << endl;
+    cout << "Enter another row: " << endl;
+    cin >> selectedRow;
+    cout << "Enter another column: " << endl;
+    cin >> selectedColumn;
+    matchedBird = answerGrid[selectedColumn][selectedRow];
+    cout << "Attempted match: " << matchedBird << endl;
+    if(selectedBird == matchedBird){
+        cout << selectedBird << " is a match with: " << matchedBird << endl;
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+    } else {
+        cout << "Incorrect. Please start over" << endl; // program must restart after mistakes
+    }
+}
+void checkMatch_hard(){ // checks for matches on an 8X8 grid
+    cout << "Enter a row 0-5: " << endl; // checks for matches on a 6X6 grid
+    cin >> selectedRow;
+    cout << "Enter a column: " << endl;
+    cin >> selectedColumn;
+    selectedBird = answerGrid[selectedRow][selectedColumn];
+    cout << "Selected bird: " << selectedBird << endl;
+    cout << "Enter another row: " << endl;
+    cin >> selectedRow;
+    cout << "Enter another column: " << endl;
+    cin >> selectedColumn;
+    matchedBird = answerGrid[selectedColumn][selectedRow];
+    cout << "Attempted match: " << matchedBird << endl;
+    if(selectedBird == matchedBird){
+        cout << selectedBird << " is a match with: " << matchedBird << endl;
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        }
+    } else {
+        cout << "Incorrect. Please start over" << endl; // program must restart after mistakes
+    }
+}
 
 int main(){
     cout << "Enter a difficulty of easy, medium or hard: " << endl;
@@ -45,43 +270,17 @@ int main(){
                 cout << puzzleGrid[i][j] << " ";
             }
         }cout << endl;
-        puzzleGrid[2][3] = Term;
-        puzzleGrid[2][3] = Term;
+        puzzleGrid[2][2] = Term;
+        puzzleGrid[3][3] = Term;
         answerGrid[2][2] = birds[6];
+        answerGrid[3][3] = birds[6];
+
         answerGrid[3][3] = birds[7];
         cout << puzzleGrid[2][2] << " " << puzzleGrid[2][2] << " "; // compiler error if loops are used for assigning final rows of game grids
         cout << puzzleGrid[3][3] << " " << puzzleGrid[3][3];
         cout << endl;
-        cout << "Enter a row: " << endl;
-        cin >> selectedRow;
-        cout << "Enter a column: " << endl;
-        cin >> selectedColumn;
-        selectedBird = answerGrid[selectedRow][selectedColumn];
-        cout << "Selected bird: " << selectedBird << endl;
-        cout << "Enter another row: " << endl;
-        cin >> selectedRow;
-        cout << "Enter another column: " << endl;
-        cin >> selectedColumn;
-        matchedBird = answerGrid[selectedColumn][selectedRow];
-        if(selectedBird == matchedBird){
-            cout << selectedBird << " is a match with: " << matchedBird;
-            cout << "Enter another row: " << endl;
-            cin >> selectedRow;
-            cout << "Enter another column: " << endl;
-            cin >> selectedColumn;
-            selectedBird = answerGrid[selectedRow][selectedColumn];
-            cout << selectedBird;
-            cout << "Now try to match another... Enter another row: ";
-            cin >> selectedRow;
-            cout << "column: " << endl;
-            cin >> selectedColumn;
-            matchedBird = answerGrid[selectedRow][selectedColumn];
-            if(selectedBird == matchedBird){
-                cout << "Nice job, another match!";
-            }
-        } else {
-            cout << "Incorrect. Please start over" << endl;
-        }
+        checkMatch_easy();
+        
     }
     if(difficulty == "medium"){ // medium game generates 3 bird names per row and doubles for matching
         cout << "medium game: " << endl;
@@ -129,6 +328,9 @@ int main(){
         cout << puzzleGrid[5][5] << " " << puzzleGrid[5][5] << " "; // compiler error if loops are used for assigning final rows of game grids
         cout << puzzleGrid[6][6] << " " << puzzleGrid[6][6] << " ";
         cout << puzzleGrid[7][7] << " " << puzzleGrid[7][7];
+        cout << endl;
+        checkMatch_medium();
+        
     }
     if(difficulty == "hard"){
         cout << "hard game: " << endl; // hard row generates 8 rows, also with 3 bird names for each, doubled for matching
@@ -197,8 +399,7 @@ int main(){
         cout << puzzleGrid[9][9] << " " << puzzleGrid[9][9] << " ";
         cout << puzzleGrid[10][10] << " " << puzzleGrid[10][10] << " ";
         cout << puzzleGrid[11][11] << " " << puzzleGrid[11][11] << endl;
-//        cout << puzzleGrid[12][12] << " " << puzzleGrid[12][12] << endl;
-//        cout << puzzleGrid[13][13] << " " << puzzleGrid[13][13] << endl;        
+        checkMatch_hard();
     }
     return 0;
 }
