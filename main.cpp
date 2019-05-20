@@ -21,7 +21,7 @@ string birds[50] =  {"Goose","Teal","Shoveler","Mallard","Pintail","Quail","Phea
 void checkMatch_easy(){ // checks for 4 matches on a 4X4 grid
     cout << "Enter a row 0-3: " << endl;
     cin >> selectedRow;
-    cout << "Enter a column: " << endl;
+    cout << "Enter a column 0-3: " << endl;
     cin >> selectedColumn;
     selectedBird = answerGrid[selectedRow][selectedColumn];
     cout << "Selected bird: " << selectedBird << endl;
@@ -46,6 +46,8 @@ void checkMatch_easy(){ // checks for 4 matches on a 4X4 grid
         matchedBird = answerGrid[selectedRow][selectedColumn];
         if(selectedBird == matchedBird){
             cout << "Nice job, another match!" << endl;
+        } else {
+            cout << "Incorrect, please try again" << endl;
         }
         cout << "Enter another row: " << endl;
         cin >> selectedRow;
@@ -62,13 +64,13 @@ void checkMatch_easy(){ // checks for 4 matches on a 4X4 grid
             cout << "Nice job, another match!" << endl;
         }
     } else {
-        cout << "Incorrect. Please start over" << endl; // program must restart after mistakes
+        cout << "Incorrect. Please start over" << endl; // program must restart after 2 mistakes
     }
 }
-void checkMatch_medium(){
-    cout << "Enter a row 0-5: " << endl; // checks for matches on a 6X6 grid
+void checkMatch_medium(){ // checks for matches on a 6X6 grid
+    cout << "Enter a row 0-5: " << endl;
     cin >> selectedRow;
-    cout << "Enter a column: " << endl;
+    cout << "Enter a column 0-5: " << endl;
     cin >> selectedColumn;
     selectedBird = answerGrid[selectedRow][selectedColumn];
     cout << "Selected bird: " << selectedBird << endl;
@@ -93,6 +95,24 @@ void checkMatch_medium(){
         matchedBird = answerGrid[selectedRow][selectedColumn];
         if(selectedBird == matchedBird){
             cout << "Nice job, another match!" << endl;
+        } else {
+            cout << "Incorrect, please try again" << endl;
+        }
+        cout << "Enter another row: " << endl;
+        cin >> selectedRow;
+        cout << "Enter another column: " << endl;
+        cin >> selectedColumn;
+        selectedBird = answerGrid[selectedRow][selectedColumn];
+        cout << "Selected bird: " << selectedBird << endl;
+        cout << "Now try to match another... Enter another row: ";
+        cin >> selectedRow;
+        cout << "column: " << endl;
+        cin >> selectedColumn;
+        matchedBird = answerGrid[selectedRow][selectedColumn];
+        if(selectedBird == matchedBird){
+            cout << "Nice job, another match!" << endl;
+        } else {
+            cout << "Incorrect, please try again." << endl;
         }
         cout << "Enter another row: " << endl;
         cin >> selectedRow;
@@ -104,23 +124,12 @@ void checkMatch_medium(){
         cin >> selectedRow;
         cout << "column: " << endl;
         cin >> selectedColumn;
+        cout << "Selected Bird: " << selectedBird << endl;
         matchedBird = answerGrid[selectedRow][selectedColumn];
         if(selectedBird == matchedBird){
             cout << "Nice job, another match!" << endl;
-        }
-        cout << "Enter another row: " << endl;
-        cin >> selectedRow;
-        cout << "Enter another column: " << endl;
-        cin >> selectedColumn;
-        selectedBird = answerGrid[selectedRow][selectedColumn];
-        cout << selectedBird << endl;
-        cout << "Now try to match another... Enter another row: ";
-        cin >> selectedRow;
-        cout << "column: " << endl;
-        cin >> selectedColumn;
-        matchedBird = answerGrid[selectedRow][selectedColumn];
-        if(selectedBird == matchedBird){
-            cout << "Nice job, another match!" << endl;
+        } else {
+            cout << "Incorrect, please try again" << endl;
         }
         cout << "Enter another row: " << endl;
         cin >> selectedRow;
@@ -137,13 +146,13 @@ void checkMatch_medium(){
             cout << "Nice job, another match!" << endl;
         }
     } else {
-        cout << "Incorrect. Please start over" << endl; // program must restart after mistakes
+        cout << "Incorrect. Please start over" << endl; // program must restart after 2 mistakes
     }
 }
 void checkMatch_hard(){ // checks for matches on an 8X8 grid
-    cout << "Enter a row 0-5: " << endl; // checks for matches on a 6X6 grid
+    cout << "Enter a row 0-7: " << endl;
     cin >> selectedRow;
-    cout << "Enter a column: " << endl;
+    cout << "Enter a column 0-7: " << endl;
     cin >> selectedColumn;
     selectedBird = answerGrid[selectedRow][selectedColumn];
     cout << "Selected bird: " << selectedBird << endl;
@@ -168,6 +177,8 @@ void checkMatch_hard(){ // checks for matches on an 8X8 grid
         matchedBird = answerGrid[selectedRow][selectedColumn];
         if(selectedBird == matchedBird){
             cout << "Nice job, another match!" << endl;
+        } else {
+            cout << "Incorrect, please try again." << endl;
         }
         cout << "Enter another row: " << endl;
         cin >> selectedRow;
@@ -182,6 +193,8 @@ void checkMatch_hard(){ // checks for matches on an 8X8 grid
         matchedBird = answerGrid[selectedRow][selectedColumn];
         if(selectedBird == matchedBird){
             cout << "Nice job, another match!" << endl;
+        } else{
+            cout << "Incorrect, please try again." << endl;
         }
         cout << "Enter another row: " << endl;
         cin >> selectedRow;
@@ -196,6 +209,8 @@ void checkMatch_hard(){ // checks for matches on an 8X8 grid
         matchedBird = answerGrid[selectedRow][selectedColumn];
         if(selectedBird == matchedBird){
             cout << "Nice job, another match!" << endl;
+        } else {
+            cout << "Incorrect, please try again" << endl;
         }
         cout << "Enter another row: " << endl;
         cin >> selectedRow;
@@ -210,6 +225,8 @@ void checkMatch_hard(){ // checks for matches on an 8X8 grid
         matchedBird = answerGrid[selectedRow][selectedColumn];
         if(selectedBird == matchedBird){
             cout << "Nice job, another match!" << endl;
+        } else{
+            cout << "Incorrect, please try again" << endl;
         }
         cout << "Enter another row: " << endl;
         cin >> selectedRow;
@@ -224,6 +241,8 @@ void checkMatch_hard(){ // checks for matches on an 8X8 grid
         matchedBird = answerGrid[selectedRow][selectedColumn];
         if(selectedBird == matchedBird){
             cout << "Nice job, another match!" << endl;
+        } else {
+            cout << "Incorrect, please try again" << endl;
         }
         cout << "Enter another row: " << endl;
         cin >> selectedRow;
@@ -240,7 +259,7 @@ void checkMatch_hard(){ // checks for matches on an 8X8 grid
             cout << "Nice job, another match!" << endl;
         }
     } else {
-        cout << "Incorrect. Please start over" << endl; // program must restart after mistakes
+        cout << "Incorrect. Please start over" << endl; // program must restart after 2 mistakes
     }
 }
 
@@ -398,7 +417,7 @@ int main(){
         cout << puzzleGrid[8][8] << " " << puzzleGrid[8][8] << " ";
         cout << puzzleGrid[9][9] << " " << puzzleGrid[9][9] << " ";
         cout << puzzleGrid[10][10] << " " << puzzleGrid[10][10] << " ";
-        cout << puzzleGrid[11][11] << " " << puzzleGrid[11][11] << endl;
+        cout << puzzleGrid[11][11] << " " << puzzleGrid[11][11] << endl; // Compiler error when using loops for final row of bird names, so they are assigned individually after loops.
         checkMatch_hard();
     }
     return 0;
